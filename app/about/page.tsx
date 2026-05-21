@@ -56,8 +56,8 @@ export default function AboutPage() {
               <p>
                 Based in Phoenix, Arizona, our workshop benefits from the region's 
                 dry climate—ideal for wood stability and minimal moisture-related 
-                movement. This environmental advantage, combined with our climate-controlled 
-                storage, ensures your blanks arrive ready to work with.
+                movement. This environmental advantage ensures your blanks arrive 
+                ready to work with.
               </p>
               <p>
                 We're proud to contribute to the thriving community of luthiers, 

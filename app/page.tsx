@@ -5,21 +5,16 @@ export default function Home() {
     <div className="relative">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center bg-cream">
-        <div 
-          className="absolute inset-0 bg-cover bg-center" 
-          style={{ backgroundImage: 'url(/hero-bg.jpg)' }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-white/40" />
         <div className="relative z-10 text-center px-6">
-          <h1 className="text-7xl md:text-9xl mb-6 tracking-wider text-white drop-shadow-lg">
+          <h1 className="text-7xl md:text-9xl mb-6 tracking-wider text-charcoal">
             A&E RESAW
           </h1>
-          <p className="text-lg md:text-xl tracking-widest uppercase text-white/90 mb-12 drop-shadow-md">
+          <p className="text-lg md:text-xl tracking-widest uppercase text-charcoal/70 mb-12">
             Quality blanks made in Phoenix, Arizona
           </p>
           <Link
             href="/products"
-            className="inline-block px-12 py-4 border-2 border-white text-white hover:bg-white hover:text-charcoal transition-all duration-300 tracking-widest text-sm uppercase"
+            className="inline-block px-12 py-4 border-2 border-charcoal text-charcoal hover:bg-charcoal hover:text-cream transition-all duration-300 tracking-widest text-sm uppercase"
           >
             View Collection
           </Link>
