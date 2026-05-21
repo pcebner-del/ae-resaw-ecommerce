@@ -25,16 +25,16 @@ export default function ProductDetail({ product }: ProductDetailProps) {
   };
 
   return (
-    <div className="pt-32 pb-20 px-6">
+    <div className="pt-32 pb-20 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-16">
           {/* Image Gallery */}
           <div>
             <ImageGallery images={product.images} productName={product.name} />
           </div>
 
           {/* Product Info */}
-          <div>
+          <div className="px-2 md:px-0">
             <div className="mb-8">
               <p className="text-sm tracking-widest uppercase text-charcoal/60 mb-3">
                 {product.category === 'guitar' ? 'Guitar Body' : 'Bass Body'}
