@@ -1,0 +1,104 @@
+[
+  {
+    "id": "01",
+    "slug": "honduran-mahogany",
+    "name": "Honduran Mahogany",
+    "woodSpecies": "Swietenia macrophylla",
+    "description": "A reference tonewood prized for its warm midrange, sustain, and complex resonance. Each blank is quarter-sawn from old-growth stock, dried slowly in Arizona's arid climate, and hand-selected for grain consistency. Recommended for hollow-bodied builds and instruments intended to age into voice.",
+    "images": {
+      "top": "/images/products/mahogany-top.svg",
+      "bottom": "/images/products/mahogany-bottom.svg",
+      "sideProfile": "/images/products/mahogany-side.svg"
+    },
+    "guitarBodyPrice": 285,
+    "bassBodyPrice": 365,
+    "weightLb": 9,
+    "dimensions": { "length": 21, "width": 15, "height": 2.25 },
+    "inStock": true
+  },
+  {
+    "id": "02",
+    "slug": "eastern-hard-maple",
+    "name": "Eastern Hard Maple",
+    "woodSpecies": "Acer saccharum",
+    "description": "Dense, bright, and articulate. Selected for figured grain — flame, quilt, or birdseye — and resawn to expose the most expressive face. Pairs with darker tonewoods for laminated bodies; stands alone for instruments requiring clarity and attack.",
+    "images": {
+      "top": "/images/products/maple-top.svg",
+      "bottom": "/images/products/maple-bottom.svg",
+      "sideProfile": "/images/products/maple-side.svg"
+    },
+    "guitarBodyPrice": 245,
+    "bassBodyPrice": 325,
+    "weightLb": 11,
+    "dimensions": { "length": 21, "width": 15, "height": 2.25 },
+    "inStock": true
+  },
+  {
+    "id": "03",
+    "slug": "black-limba",
+    "name": "Black Limba",
+    "woodSpecies": "Terminalia superba",
+    "description": "West African hardwood with a striking dark-veined figure over a pale honey field. Tonally balanced — open midrange, defined low end. Reserved for one-off builds; supply is limited and selected only when grain and density meet our standard.",
+    "images": {
+      "top": "/images/products/limba-top.svg",
+      "bottom": "/images/products/limba-bottom.svg",
+      "sideProfile": "/images/products/limba-side.svg"
+    },
+    "guitarBodyPrice": 425,
+    "bassBodyPrice": 545,
+    "weightLb": 8,
+    "dimensions": { "length": 21, "width": 15, "height": 2.25 },
+    "inStock": true
+  },
+  {
+    "id": "04",
+    "slug": "swamp-ash",
+    "name": "Swamp Ash",
+    "woodSpecies": "Fraxinus profunda",
+    "description": "Lightweight, resonant, and visually understated. Open-grained with a chambered cellular structure that produces a pronounced attack and singing sustain. The traditional choice for vintage-style solid bodies.",
+    "images": {
+      "top": "/images/products/ash-top.svg",
+      "bottom": "/images/products/ash-bottom.svg",
+      "sideProfile": "/images/products/ash-side.svg"
+    },
+    "guitarBodyPrice": 215,
+    "bassBodyPrice": 285,
+    "weightLb": 7,
+    "dimensions": { "length": 21, "width": 15, "height": 2.25 },
+    "inStock": true
+  },
+  {
+    "id": "05",
+    "slug": "spanish-cedar",
+    "name": "Spanish Cedar",
+    "woodSpecies": "Cedrela odorata",
+    "description": "Aromatic, lightweight, and tonally warm. Long favored in classical and acoustic construction; offered here as a solid-body alternative for players seeking woody warmth without weight. Limited release.",
+    "images": {
+      "top": "/images/products/cedar-top.svg",
+      "bottom": "/images/products/cedar-bottom.svg",
+      "sideProfile": "/images/products/cedar-side.svg"
+    },
+    "guitarBodyPrice": 265,
+    "bassBodyPrice": 345,
+    "weightLb": 6,
+    "dimensions": { "length": 21, "width": 15, "height": 2.25 },
+    "inStock": false
+  },
+  {
+    "id": "06",
+    "slug": "korina",
+    "name": "White Korina",
+    "woodSpecies": "Terminalia superba",
+    "description": "The pale counterpart to Black Limba. A vintage signature wood — light, resonant, and tonally elegant with a slightly scooped midrange. Reserved for builders seeking historical authenticity.",
+    "images": {
+      "top": "/images/products/korina-top.svg",
+      "bottom": "/images/products/korina-bottom.svg",
+      "sideProfile": "/images/products/korina-side.svg"
+    },
+    "guitarBodyPrice": 395,
+    "bassBodyPrice": 495,
+    "weightLb": 8,
+    "dimensions": { "length": 21, "width": 15, "height": 2.25 },
+    "inStock": true
+  }
+]

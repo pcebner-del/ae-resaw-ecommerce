@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Atelier workbench">
+  <defs>
+    <radialGradient id="atm2" cx="60%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#241c14"/>
+      <stop offset="100%" stop-color="#080706"/>
+    </radialGradient>
+    <linearGradient id="bench" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1c10"/>
+      <stop offset="100%" stop-color="#100a06"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#atm2)"/>
+  <rect y="640" width="100%" height="440" fill="url(#bench)"/>
+  <g stroke="rgba(168,107,60,0.08)" stroke-width="0.5">
+    <line x1="0" y1="640" x2="1920" y2="640"/>
+    <line x1="0" y1="660" x2="1920" y2="660"/>
+  </g>
+</svg>
