@@ -21,7 +21,7 @@ export default function ImageGallery({ images, productName }: ImageGalleryProps)
   };
 
   return (
-    <div>
+    <div className="px-2 md:px-0">
       {/* Main Image */}
       <div className="aspect-square bg-cream mb-6 flex items-center justify-center">
         <div className="text-center p-12">
@@ -35,19 +35,19 @@ export default function ImageGallery({ images, productName }: ImageGalleryProps)
       </div>
 
       {/* Thumbnail Navigation */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-3 gap-2 md:gap-4">
         {(Object.keys(images) as Array<keyof typeof images>).map((view) => (
           <button
             key={view}
             onClick={() => setCurrentImage(view)}
-            className={`aspect-square border transition-all ${
+            className={`aspect-square border transition-all overflow-hidden ${
               currentImage === view
                 ? 'border-charcoal'
                 : 'border-charcoal/20 hover:border-charcoal/50'
             }`}
           >
-            <div className="w-full h-full bg-cream flex items-center justify-center">
-              <span className="text-xs tracking-widest uppercase text-charcoal/30">
+            <div className="w-full h-full bg-cream flex items-center justify-center px-2">
+              <span className="text-xs tracking-widest uppercase text-charcoal/30 text-center line-clamp-2">
                 {imageLabels[view]}
               </span>
             </div>
