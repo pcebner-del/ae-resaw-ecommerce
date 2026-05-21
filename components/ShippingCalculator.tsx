@@ -42,21 +42,21 @@ export default function ShippingCalculator() {
   };
 
   return (
-    <div>
-      <h3 className="text-sm tracking-widest uppercase mb-4">
+    <div className="w-full">
+      <h3 className="text-sm tracking-widest uppercase mb-3 sm:mb-4">
         Estimate Shipping
       </h3>
       
-      <div className="space-y-4">
+      <div className="space-y-4 w-full">
         {/* Package Type */}
-        <div>
-          <label className="text-sm text-charcoal/70 block mb-2">
+        <div className="w-full">
+          <label className="text-sm text-charcoal/70 block mb-2 sm:mb-3">
             Package Type
           </label>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-2 gap-3 w-full">
             <button
               onClick={() => setPackageType('standard')}
-              className={`py-2 px-4 border text-sm transition-colors ${
+              className={`py-2 px-3 sm:px-4 border text-xs sm:text-sm transition-colors ${
                 packageType === 'standard'
                   ? 'bg-charcoal text-white border-charcoal'
                   : 'border-charcoal/20 hover:border-charcoal'
@@ -66,7 +66,7 @@ export default function ShippingCalculator() {
             </button>
             <button
               onClick={() => setPackageType('oversized')}
-              className={`py-2 px-4 border text-sm transition-colors ${
+              className={`py-2 px-3 sm:px-4 border text-xs sm:text-sm transition-colors ${
                 packageType === 'oversized'
                   ? 'bg-charcoal text-white border-charcoal'
                   : 'border-charcoal/20 hover:border-charcoal'
@@ -78,24 +78,24 @@ export default function ShippingCalculator() {
         </div>
 
         {/* ZIP Code Input */}
-        <div>
-          <label htmlFor="zipCode" className="text-sm text-charcoal/70 block mb-2">
+        <div className="w-full">
+          <label htmlFor="zipCode" className="text-sm text-charcoal/70 block mb-2 sm:mb-3">
             Destination ZIP Code
           </label>
-          <div className="flex gap-3">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full">
             <input
               id="zipCode"
               type="text"
               value={zipCode}
               onChange={(e) => setZipCode(e.target.value.replace(/\D/g, '').slice(0, 5))}
               placeholder="85001"
-              className="flex-1 py-3 px-4 border border-charcoal/20 focus:outline-none focus:border-charcoal"
+              className="flex-1 py-3 px-4 border border-charcoal/20 focus:outline-none focus:border-charcoal text-sm w-full"
               maxLength={5}
             />
             <button
               onClick={calculateShipping}
               disabled={loading}
-              className="px-6 py-3 bg-charcoal text-white text-sm tracking-widest uppercase hover:bg-charcoal/90 transition-colors disabled:opacity-50"
+              className="w-full sm:w-auto px-6 py-3 bg-charcoal text-white text-xs sm:text-sm tracking-widest uppercase hover:bg-charcoal/90 transition-colors disabled:opacity-50"
             >
               {loading ? 'Calculating...' : 'Calculate'}
             </button>
@@ -104,23 +104,23 @@ export default function ShippingCalculator() {
 
         {/* Shipping Rates */}
         {rates && (
-          <div className="mt-6 pt-6 border-t border-charcoal/10">
-            <p className="text-sm tracking-widest uppercase mb-4 text-charcoal/70">
+          <div className="mt-6 pt-6 border-t border-charcoal/10 w-full">
+            <p className="text-xs sm:text-sm tracking-widest uppercase mb-3 sm:mb-4 text-charcoal/70">
               Available Options
             </p>
-            <div className="space-y-3">
+            <div className="space-y-3 w-full">
               {rates.map((rate, index) => (
                 <div
                   key={index}
-                  className="flex justify-between items-center py-3 px-4 border border-charcoal/10"
+                  className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-3 px-3 sm:px-4 border border-charcoal/10 w-full gap-2"
                 >
-                  <div>
-                    <p className="font-medium">{rate.service}</p>
-                    <p className="text-sm text-charcoal/60">
+                  <div className="flex-1">
+                    <p className="font-medium text-sm">{rate.service}</p>
+                    <p className="text-xs sm:text-sm text-charcoal/60">
                       {rate.estimatedDays} business days
                     </p>
                   </div>
-                  <p className="font-medium">
+                  <p className="font-medium text-sm">
                     ${(rate.price / 100).toFixed(2)}
                   </p>
                 </div>
