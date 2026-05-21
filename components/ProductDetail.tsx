@@ -25,38 +25,38 @@ export default function ProductDetail({ product }: ProductDetailProps) {
   };
 
   return (
-    <div className="pt-32 pb-20 px-4 md:px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-16">
+    <div className="pt-32 pb-20 px-4 sm:px-6 md:px-8 w-full overflow-hidden">
+      <div className="w-full max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 w-full">
           {/* Image Gallery */}
-          <div>
+          <div className="w-full min-w-0">
             <ImageGallery images={product.images} productName={product.name} />
           </div>
 
           {/* Product Info */}
-          <div className="px-2 md:px-0">
-            <div className="mb-8">
-              <p className="text-sm tracking-widest uppercase text-charcoal/60 mb-3">
+          <div className="w-full min-w-0">
+            <div className="mb-6 sm:mb-8">
+              <p className="text-sm tracking-widest uppercase text-charcoal/60 mb-2 sm:mb-3">
                 {product.category === 'guitar' ? 'Guitar Body' : 'Bass Body'}
               </p>
-              <h1 className="text-4xl md:text-5xl font-serif mb-6 tracking-wide">
+              <h1 className="text-4xl md:text-5xl font-serif mb-4 sm:mb-6 tracking-wide">
                 {product.name}
               </h1>
-              <p className="text-3xl tracking-wide mb-8">
+              <p className="text-3xl tracking-wide mb-6 sm:mb-8">
                 {formatPrice(product.price)}
               </p>
             </div>
 
             {/* Description */}
-            <div className="mb-10 pb-10 border-b border-charcoal/10">
-              <p className="text-lg leading-relaxed text-charcoal/80">
+            <div className="mb-8 pb-8 border-b border-charcoal/10">
+              <p className="text-base sm:text-lg leading-relaxed text-charcoal/80">
                 {product.description}
               </p>
             </div>
 
             {/* Specifications */}
-            <div className="mb-10 pb-10 border-b border-charcoal/10">
-              <h3 className="text-sm tracking-widest uppercase mb-4">
+            <div className="mb-8 pb-8 border-b border-charcoal/10">
+              <h3 className="text-sm tracking-widest uppercase mb-3 sm:mb-4">
                 Specifications
               </h3>
               <div className="space-y-2 text-charcoal/70">
@@ -78,21 +78,21 @@ export default function ProductDetail({ product }: ProductDetailProps) {
             </div>
 
             {/* Size Selection */}
-            <div className="mb-10">
-              <h3 className="text-sm tracking-widest uppercase mb-4">
+            <div className="mb-8 sm:mb-10">
+              <h3 className="text-sm tracking-widest uppercase mb-3 sm:mb-4">
                 Size Category
               </h3>
-              <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-6">
                 {product.sizeOptions.guitarBody && (
                   <button
                     onClick={() => setSizeCategory('guitarBody')}
-                    className={`py-3 px-6 border transition-colors ${
+                    className={`py-3 px-4 border transition-colors ${
                       sizeCategory === 'guitarBody'
                         ? 'bg-charcoal text-white border-charcoal'
                         : 'border-charcoal/20 hover:border-charcoal'
                     }`}
                   >
-                    <span className="text-sm tracking-widest uppercase">
+                    <span className="text-xs sm:text-sm tracking-widest uppercase block">
                       Guitar Body
                     </span>
                   </button>
@@ -100,13 +100,13 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                 {product.sizeOptions.bassBody && (
                   <button
                     onClick={() => setSizeCategory('bassBody')}
-                    className={`py-3 px-6 border transition-colors ${
+                    className={`py-3 px-4 border transition-colors ${
                       sizeCategory === 'bassBody'
                         ? 'bg-charcoal text-white border-charcoal'
                         : 'border-charcoal/20 hover:border-charcoal'
                     }`}
                   >
-                    <span className="text-sm tracking-widest uppercase">
+                    <span className="text-xs sm:text-sm tracking-widest uppercase block">
                       Bass Body
                     </span>
                   </button>
@@ -114,14 +114,14 @@ export default function ProductDetail({ product }: ProductDetailProps) {
               </div>
 
               {/* Size Options */}
-              <div>
-                <label className="text-sm tracking-widest uppercase block mb-3">
+              <div className="w-full">
+                <label className="text-sm tracking-widest uppercase block mb-2 sm:mb-3">
                   Select Size
                 </label>
                 <select
                   value={selectedSize}
                   onChange={(e) => setSelectedSize(e.target.value)}
-                  className="w-full py-3 px-4 border border-charcoal/20 bg-white focus:outline-none focus:border-charcoal"
+                  className="w-full py-3 px-4 border border-charcoal/20 bg-white focus:outline-none focus:border-charcoal text-sm"
                 >
                   <option value="">Choose an option</option>
                   {product.sizeOptions[sizeCategory]?.map((size, index) => (
@@ -136,13 +136,13 @@ export default function ProductDetail({ product }: ProductDetailProps) {
             {/* Add to Cart */}
             <button
               onClick={handleAddToCart}
-              className="w-full py-4 bg-charcoal text-white tracking-widest text-sm uppercase hover:bg-charcoal/90 transition-colors mb-8"
+              className="w-full py-4 bg-charcoal text-white tracking-widest text-sm uppercase hover:bg-charcoal/90 transition-colors mb-6 sm:mb-8"
             >
               Add to Cart
             </button>
 
             {/* Shipping Calculator */}
-            <div className="pt-10 border-t border-charcoal/10">
+            <div className="pt-8 border-t border-charcoal/10">
               <ShippingCalculator />
             </div>
           </div>

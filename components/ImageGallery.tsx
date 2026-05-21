@@ -21,11 +21,11 @@ export default function ImageGallery({ images, productName }: ImageGalleryProps)
   };
 
   return (
-    <div className="px-2 md:px-0">
+    <div className="w-full">
       {/* Main Image */}
-      <div className="aspect-square bg-cream mb-6 flex items-center justify-center">
-        <div className="text-center p-12">
-          <p className="text-sm tracking-widest uppercase text-charcoal/40 mb-2">
+      <div className="w-full aspect-square bg-cream mb-4 sm:mb-6 flex items-center justify-center">
+        <div className="text-center p-6 sm:p-12 w-full">
+          <p className="text-xs sm:text-sm tracking-widest uppercase text-charcoal/40 mb-2">
             {imageLabels[currentImage]}
           </p>
           <p className="text-xs tracking-widest uppercase text-charcoal/20">
@@ -35,7 +35,7 @@ export default function ImageGallery({ images, productName }: ImageGalleryProps)
       </div>
 
       {/* Thumbnail Navigation */}
-      <div className="grid grid-cols-3 gap-2 md:gap-4">
+      <div className="grid grid-cols-3 gap-2 sm:gap-3 w-full">
         {(Object.keys(images) as Array<keyof typeof images>).map((view) => (
           <button
             key={view}
@@ -46,7 +46,7 @@ export default function ImageGallery({ images, productName }: ImageGalleryProps)
                 : 'border-charcoal/20 hover:border-charcoal/50'
             }`}
           >
-            <div className="w-full h-full bg-cream flex items-center justify-center px-2">
+            <div className="w-full h-full bg-cream flex items-center justify-center p-1 sm:p-2">
               <span className="text-xs tracking-widest uppercase text-charcoal/30 text-center line-clamp-2">
                 {imageLabels[view]}
               </span>
